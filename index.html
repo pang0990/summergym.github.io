@@ -87,6 +87,7 @@
       object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
     }
     .facility-item p {
       margin-top: 10px;
@@ -103,11 +104,62 @@
       border-top: 1px solid #ccc;
       margin: 40px 0;
     }
+    .gallery-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 20px 0;
+    }
+    .gallery-slider img {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      scroll-snap-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
     @media (max-width: 600px) {
       .facility-item img {
         height: auto;
         aspect-ratio: 3 / 4;
       }
+      .gallery-slider img {
+        width: 240px;
+        height: 160px;
+      }
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      margin: 10% auto;
+      display: block;
+      max-width: 90%;
+    }
+    .modal-content img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -255,7 +307,37 @@
       <img src="pic/facility5.jpg" alt="女性訓練專區" style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
       <p style="margin-top: 10px; text-align: center;">女性訓練專區，配有落地窗美景，提供舒適環境。</p>
     </div>
+ <section style="padding-top: 0;">
+  <h3 style="text-align: center; margin-top: 40px;">更多場館環境照片</h3>
+  <div class="gallery-slider">
+    <img src="pic/gallery1.jpg" alt="環境圖1" onclick="openModal(this.src)">
+    <img src="pic/gallery2.jpg" alt="環境圖2" onclick="openModal(this.src)">
+    <img src="pic/gallery3.jpg" alt="環境圖3" onclick="openModal(this.src)">
+    <img src="pic/gallery4.jpg" alt="環境圖4" onclick="openModal(this.src)">
+    <img src="pic/gallery5.jpg" alt="環境圖5" onclick="openModal(this.src)">
+    <img src="pic/gallery6.jpg" alt="環境圖6" onclick="openModal(this.src)">
+    <img src="pic/gallery7.jpg" alt="環境圖7" onclick="openModal(this.src)">
+  </div>
+</section>
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <img id="modalImg" src="" alt="放大圖">
+  </div>
+</div>
 
+<script>
+  function openModal(src) {
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    modal.style.display = 'block';
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    document.getElementById('imgModal').style.display = 'none';
+  }
+</script>
   </div>
 </section>
 
