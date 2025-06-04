@@ -1,58 +1,289 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>健身工廠信義廠</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        .button {
-            text-decoration: none;
-            padding: 1rem 2rem;
-            border: 2px solid #fff;
-            color: #fff;
-            font-size: 1rem;
-            text-transform: uppercase;
-            transition: all 0.3s ease-in-out;
-            border-radius: 5px;
-        }
-        .button:hover {
-            background-color: #fff;
-            color: #000;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Gym | 健體顧問專屬網站</title>
+  <meta name="description" content="Summer 健體顧問 | 健身工廠信義廠專屬會籍與6月入會優惠介紹，限時折扣中，立即諮詢 LINE！">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+      color: #333;
+    }
+    .hero-image {
+      background: url('pic/011.jpg') no-repeat center center/cover;
+      width: 100%;
+      height: 60vh;
+    }
+    .hero-text {
+      text-align: center;
+      background: #fff;
+      padding: 40px 20px;
+      color: #333;
+    }
+    nav {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .contact-links a {
+      text-decoration: none;
+      font-size: 1.2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .contact-links i {
+      font-size: 2.5em;
+      margin-bottom: 8px;
+    }
+    .facility-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .facility-item {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+    .facility-item img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .facility-item p {
+      margin-top: 10px;
+      text-align: center;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 40px 0;
+    }
+    @media (max-width: 600px) {
+      .facility-item img {
+        height: auto;
+        aspect-ratio: 3 / 4;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>歡迎來到健身工廠信義廠</h1>
-        <div class="buttons">
-            <a href="about.html" class="button">相關資訊</a>
-            <a href="contact.html" class="button">聯絡方式</a>
-        </div>
+
+  <div class="hero-image"></div>
+  <section class="hero-text">
+    <h1>健身工廠指定 Summer 享入會費活動</h1>
+    <p>限時優惠｜專屬體驗方案｜立即諮詢</p>
+  </section>
+  
+  <nav>
+    <a href="#about">關於我</a>
+    <a href="#facility">信義廠介紹</a>
+    <a href="#pricing">會籍方案</a>
+    <a href="#facility-gallery">廠館環境</a>
+    <a href="#contact">聯絡我</a>
+  </nav>
+
+  <section id="about">
+    <h2>關於我</h2>
+    <p>
+        我是 Summer，健身工廠的健體顧問，專為北部地區提供最新活動與收費資訊。<br>
+        無論您是健身新手，還是已有運動習慣，歡迎隨時聯絡我，我會即時回覆並協助您順利加入健身行列，依照您的目標推薦最合適的會籍方案與訓練規劃。<br>
+        如果您想開始運動卻不知道從哪裡開始，或是單純喜歡運動，都歡迎預約來場免費參觀體驗，現場感受再決定！<br>
+        📩 預約諮詢請加 LINE：<a href="https://line.me/R/ti/p/@881lzyzd">LINE ID：@881lzyzd</a>
+</p>
+
+  </section>
+
+  <hr>
+
+  <section id="facility">
+    <h2>信義廠介紹</h2>
+    <p><strong>地址：</strong>台北市信義區松壽路22號4樓（Neo19）</p>
+    <p><strong>交通：</strong>捷運象山站1號出口、市府站3號出口步行約5分鐘</p>
+    <p><strong>特色：</strong>健身工廠信義廠位於台北最熱鬧的松壽路上，緊鄰新光三越、微風信義等時尚地標，擁有超過1300坪寬敞空間與挑高設計，是喜歡精緻感與時尚風格運動者的首選。</p>
+    <p>場館規劃完善，設有心肺有氧區、自由重量區、機械式阻力器材、女性專屬訓練空間、有氧教室與飛輪教室，無論是健身新手還是進階健將都能找到適合的訓練方式。</p>
+    <p>環境明亮舒適，配備蒸氣室、烤箱、淋浴間與更衣室，讓你運動後也能徹底放鬆身心。</p>
+    <p><strong>開放時間：</strong>週一至週六 06:00–24:00；週日 08:00–24:00</p>
+    <img src="pic/012.jpg" alt="信義廠館內部照" style="width: 100%; max-width: 800px; display: block; margin: 30px auto; border-radius: 10px;">
+  </section>
+
+  <hr>
+
+  <section id="pricing">
+    <h2 style="background: linear-gradient(135deg, #ff7e5f, #feb47b); color: white; text-align: center; padding: 20px; border-radius: 10px;">6月限定入會活動</h2>
+    <ul style="list-style: none; padding: 20px; background-color: #fff3e0; border-radius: 10px; margin-bottom: 40px;">
+      <li>📱 <strong>記步挑戰</strong> 入會費只要 <strong>$299</strong>（再贈好禮）</li>
+      <li>🎖️ <strong>2025世界壯年運動會</strong> 選手或志工 ➜ <strong>免入會費</strong></li>
+      <li>🎓 <strong>學生、軍警消</strong> ➜ <strong>免入會費</strong></li>
+      <li>🌀 <strong>舊會員重新加入</strong> ➜ <strong>免入會費</strong></li>
+      <li>👨‍👩‍👧‍👦 <strong>會員配偶與直系</strong> ➜ <strong>免入會費＋免手續費</strong></li>
+      <li>🔓 <strong>不綁約</strong> ➜ <strong>免入會費＋免手續費</strong></li>
+    </ul>
+
+    <h2>常規收費方案</h2>
+    <div style="overflow-x: auto;">
+  <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; border: 2px solid #ccc;">
+    <thead style="background-color: #333; color: white;">
+      <tr>
+        <th style="padding: 12px; border: 1px solid #ccc;">項目</th>
+        <th style="padding: 12px; border: 1px solid #ccc;">費用 (NTD)</th>
+        <th style="padding: 12px; border: 1px solid #ccc;">備註</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">入會費</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">2500</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">
+          一次性收取。每月皆有活動可折抵。<br>
+          家庭卡、會員直系親屬 ➜ 免入會費及手續費。<br>
+          學生、軍警消、銀髮族 ➜ 免入會費。
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">手續費</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">1000</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">一次性</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">白金卡</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">12M $1888 / 24M $1488</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">06:00–00:00 不限時段／全台通用</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">金卡</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">12M $1688 / 24M $1288</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">06:00–00:00 不限時段</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">銀卡</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">12M $1288</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">平日17:00–21:00、假日13:00–17:00 限制</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">鈦銀卡</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">12M $1288</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">平日17:00–00:00 限制／假日全時段</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">小型廠館</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">988 / 1088</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">石牌、新店、七張、永和、龍安、蘆洲</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border: 1px solid #ccc;">一般廠館</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">1088 / 1288</td>
+        <td style="padding: 10px; border: 1px solid #ccc;">除信義與小型廠</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
     </div>
+
+   <hr>
+<section id="facility-gallery" style="background: #fff; padding: 60px 20px;">
+  <h2 style="text-align: center; font-size: 2em; margin-bottom: 40px;">廠館環境</h2>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; max-width: 1000px; margin: auto;">
+
+    <div style="flex: 1 1 300px; max-width: 400px;">
+      <img src="pic/facility1.jpg" alt="會員人臉辨識系統"style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <p style="margin-top: 10px; text-align: center;">會員人臉辨識系統，快速通關，保持社交距離。</p>
+    </div>
+
+    <div style="flex: 1 1 300px; max-width: 400px;">
+      <img src="pic/facility2.jpg" alt="兩層樓超大空間" style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <p style="margin-top: 10px; text-align: center;">兩層樓超大空間，設有心肺有氧區、重量訓練區等。</p>
+    </div>
+
+    <div style="flex: 1 1 300px; max-width: 400px;">
+      <img src="pic/facility3.jpg" alt="兩倍啞鈴份量" style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <p style="margin-top: 10px; text-align: center;">兩倍啞鈴份量，最高達150磅，無需等待。</p>
+    </div>
+
+    <div style="flex: 1 1 300px; max-width: 400px;">
+      <img src="pic/facility4.jpg" alt="私人教練指導區" style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <p style="margin-top: 10px; text-align: center;">半隱密的私人教練指導區，提供專業指導與恢復。</p>
+    </div>
+
+    <div style="flex: 1 1 300px; max-width: 400px;">
+      <img src="pic/facility5.jpg" alt="女性訓練專區" style="width: 100%; height: 240px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <p style="margin-top: 10px; text-align: center;">女性訓練專區，配有落地窗美景，提供舒適環境。</p>
+    </div>
+
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<section id="contact" style="background-color: #fff; padding: 60px 20px;">
+  <div class="container" style="max-width: 800px; margin: auto; text-align: center;">
+    <h2 style="font-size: 2em; margin-bottom: 30px;">聯絡我</h2>
+    
+    <div class="contact-links" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+
+      <a href="https://line.me/R/ti/p/@881lzyzd" target="_blank" style="text-decoration: none; color: #00c300; font-size: 1.2em; display: flex; flex-direction: column; align-items: center;">
+        <i class="fab fa-line" style="font-size: 2.5em; margin-bottom: 8px;"></i>
+        LINE<br>@881lzyzd
+      </a>
+
+      <a href="https://www.instagram.com/summerkuo173" target="_blank" style="text-decoration: none; color: #e1306c; font-size: 1.2em; display: flex; flex-direction: column; align-items: center;">
+        <i class="fab fa-instagram" style="font-size: 2.5em; margin-bottom: 8px;"></i>
+        Instagram<br>@summerkuo173
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <footer>
+    <p>© 2025 Summer 健體顧問｜健身工廠信義廠</p>
+  </footer>
+
 </body>
 </html>
