@@ -10,7 +10,7 @@
   <meta name="google-site-verification" content="aef8c83c407a45e9xxxxxxxxxxxxxxxxxxxx" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
+ <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Noto Sans TC', sans-serif;
@@ -164,7 +164,6 @@
   </style>
 </head>
 <body>
-
   <div class="hero-image"></div>
   <section class="hero-text">
     <h1>健身工廠指定 Summer 享入會費活動</h1>
@@ -309,20 +308,21 @@
     </div>
  <section style="padding-top: 0;">
   <h3 style="text-align: center; margin-top: 40px;">更多場館環境照片</h3>
-  <div class="gallery-slider">
-    <img src="pic/gallery1.jpg" alt="環境圖1" onclick="openModal(this.src)">
-    <img src="pic/gallery2.jpg" alt="環境圖2" onclick="openModal(this.src)">
-    <img src="pic/gallery3.jpg" alt="環境圖3" onclick="openModal(this.src)">
-    <img src="pic/gallery4.jpg" alt="環境圖4" onclick="openModal(this.src)">
-    <img src="pic/gallery5.jpg" alt="環境圖5" onclick="openModal(this.src)">
-    <img src="pic/gallery6.jpg" alt="環境圖6" onclick="openModal(this.src)">
-    <img src="pic/gallery7.jpg" alt="環境圖7" onclick="openModal(this.src)">
+  <div class="gallery-slider" style="display: flex; overflow-x: auto; gap: 20px; padding: 0 20px; max-width: 1000px; margin: auto;">
+    <img src="pic/gallery1.jpg" alt="環境圖1" onclick="openModal(this.src)" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer;">
+    <img src="pic/gallery2.jpg" alt="環境圖2" onclick="openModal(this.src)" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer;">
+    <img src="pic/gallery3.jpg" alt="環境圖3" onclick="openModal(this.src)" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer;">
+    <img src="pic/gallery4.jpg" alt="環境圖4" onclick="openModal(this.src)" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer;">
+    <img src="pic/gallery5.jpg" alt="環境圖5" onclick="openModal(this.src)" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer;">
+    <img src="pic/gallery6.jpg" alt="環境圖6" onclick="openModal(this.src)" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer;">
+    <img src="pic/gallery7.jpg" alt="環境圖7" onclick="openModal(this.src)" style="width: 300px; height: 200px; object-fit: cover; border-radius: 10px; cursor: pointer;">
   </div>
 </section>
-<div id="imgModal" class="modal" onclick="closeModal()">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-    <img id="modalImg" src="" alt="放大圖">
+
+<div id="imgModal" class="modal" onclick="closeModal()" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:1000;">
+  <span class="close" onclick="closeModal()" style="position: absolute; top: 20px; right: 30px; font-size: 2em; color: white; cursor: pointer;">&times;</span>
+  <div class="modal-content" style="display:flex; justify-content:center; align-items:center; height: 100%;">
+    <img id="modalImg" src="" alt="放大圖" style="max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 10px;">
   </div>
 </div>
 
@@ -330,7 +330,7 @@
   function openModal(src) {
     const modal = document.getElementById('imgModal');
     const modalImg = document.getElementById('modalImg');
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
     modalImg.src = src;
   }
 
@@ -338,8 +338,6 @@
     document.getElementById('imgModal').style.display = 'none';
   }
 </script>
-  </div>
-</section>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -363,12 +361,9 @@
   </div>
 </section>
 
-
-
-
-  <footer>
-    <p>© 2025 Summer 健體顧問｜健身工廠信義廠</p>
-  </footer>
+<footer style="width: 100%; background-color: #222; color: white; text-align: center; padding: 20px 0; margin-top: 60px;">
+  <p>© 2025 Summer 健體顧問｜健身工廠信義廠</p>
+</footer>
 
 </body>
 </html>
