@@ -179,6 +179,40 @@
     width: 100%;
   }
 }
+  @media (max-width: 768px) {
+    .info-gallery {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .info-gallery img {
+      height: auto !important;
+      width: 45vw !important;
+      aspect-ratio: 9 / 16 !important;
+      object-fit: cover !important;
+    }
+  }
+   @media (max-width: 768px) {
+    .info-gallery {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .info-gallery img {
+      height: auto !important;
+      width: 45vw !important;
+      aspect-ratio: 9 / 16 !important;
+      object-fit: cover !important;
+    }
+    .photo-wall {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .photo-wall img {
+      width: 45vw !important;
+      aspect-ratio: 9 / 16 !important;
+      object-fit: cover !important;
+    }
+  }
+
   </style>
 </head>
 <body>
@@ -186,6 +220,9 @@
   <section class="hero-text">
     <h1>健身工廠指定 Summer 享入會費活動</h1>
     <p>限時優惠｜專屬體驗方案｜立即諮詢</p>
+    <p>健身工廠為柏文健康旗下｜台灣首家上市之專業健身中心品牌 ｜ 柏文健康股票代號：8462
+      全國79間專業據點｜25萬名會員肯定｜亞洲第一家獲得SGS全球服務認證標章的健身品牌
+    </p>
   </section>
   
   <nav>
@@ -201,7 +238,7 @@
   <div class="photo-wall" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 20px 0;">
   <img src="pic/me1.jpg" alt="生活照1" onclick="openModal(this.src)"
        style="width: 180px; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; cursor: pointer;">
-       
+
   <img src="pic/me2.jpg" alt="生活照2" onclick="openModal(this.src)"
        style="width: 180px; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; cursor: pointer;">
 </div>
@@ -219,11 +256,11 @@
 
   <section id="facility">
     <h2>信義廠介紹</h2>
-   <div style="display: flex; flex-wrap: nowrap; gap: 20px; justify-content: center; margin-top: 40px; overflow-x: auto; padding-bottom: 10px;">
+  <div class="info-gallery" style="display: flex; flex-wrap: nowrap; gap: 20px; justify-content: center; margin-top: 40px; overflow-x: auto; padding-bottom: 10px;">
   <img src="pic/long1.jpg" alt="信義廠資訊圖1"
        style="height: 480px; width: auto; border-radius: 10px; object-fit: contain; cursor: zoom-in;"
        onclick="openModal(this.src)">
-       
+
   <img src="pic/long2.jpg" alt="信義廠資訊圖2"
        style="height: 480px; width: auto; border-radius: 10px; object-fit: contain; cursor: zoom-in;"
        onclick="openModal(this.src)">
@@ -234,8 +271,11 @@
     <p><strong>地址：</strong>台北市信義區松壽路22號4樓（A19）(A13蘋果對面)</p>
     <p><strong>交通：</strong>捷運象山站1號出口、市府站3號出口步行約5分鐘</p>
     <p><strong>特色：</strong>健身工廠信義廠位於台北最熱鬧的松壽路上，緊鄰新光三越、微風信義等時尚地標，擁有超過1300坪寬敞空間與挑高設計，是喜歡精緻感與時尚風格運動者的首選。</p>
-    <p>場館規劃完善，設有心肺有氧區、自由重量區、機械式阻力器材、女性專屬訓練空間、有氧教室與飛輪教室，無論是健身新手還是進階健將都能找到適合的訓練方式。</p>
-    <p>環境明亮舒適，配備蒸氣室、烤箱、淋浴間與更衣室，讓你運動後也能徹底放鬆身心。</p>
+    <p>✔︎千坪大空間最頂規的運動品質</p>
+    <p>✔︎全新國外進口健身及有氧器材</p>   
+    <p>✔︎包含瑜伽、飛輪、有氧、氧課程無限上課</p>   
+    <p>場館規劃完善，設有心肺有氧區、自由重量區、機械式阻力器材、女性專屬訓練空間、有氧教室與飛輪教室</p>  
+    <p>環境明亮舒適，配備蒸氣室、SAUNA、淋浴間與更衣室，讓你運動後也能徹底放鬆身心。</p>
     <p><strong>開放時間：</strong>週一至週六 06:00–24:00；週日 08:00–24:00</p>
     <img src="pic/012.jpg" alt="信義廠館內部照" style="width: 100%; max-width: 800px; display: block; margin: 30px auto; border-radius: 10px;">
   </section>
