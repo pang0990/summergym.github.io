@@ -200,12 +200,14 @@
     <h2>關於我</h2>
     <div style="margin-top: 40px;">
     <div class="photo-wall">
-    <img src="pic/me1.jpg" alt="生活照1" >
-    <img src="pic/me2.jpg" alt="生活照2" >
-    <img src="pic/me3.jpg" alt="生活照3" >
-    <img src="pic/me4.jpg" alt="生活照4" >
-    <img src="pic/me5.jpg" alt="生活照5" >
-    <img src="pic/me6.jpg" alt="生活照6" >
+    <div class="photo-wall-slider" style="display: flex; overflow-x: auto; gap: 20px; padding: 10px 0; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+    <img src="pic/me1.jpg" alt="生活照1" onclick="openModal(this.src)" style="width: 300px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; scroll-snap-align: start; cursor: pointer;">
+    <img src="pic/me2.jpg" alt="生活照2" onclick="openModal(this.src)" style="width: 300px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; scroll-snap-align: start; cursor: pointer;">
+    <img src="pic/me3.jpg" alt="生活照3" onclick="openModal(this.src)" style="width: 300px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; scroll-snap-align: start; cursor: pointer;">
+    <img src="pic/me4.jpg" alt="生活照4" onclick="openModal(this.src)" style="width: 300px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; scroll-snap-align: start; cursor: pointer;">
+    <img src="pic/me5.jpg" alt="生活照5" onclick="openModal(this.src)" style="width: 300px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; scroll-snap-align: start; cursor: pointer;">
+    <img src="pic/me6.jpg" alt="生活照6" onclick="openModal(this.src)" style="width: 300px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; scroll-snap-align: start; cursor: pointer;">
+  </div>
   </div>
 </div>
 
