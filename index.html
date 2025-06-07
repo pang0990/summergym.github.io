@@ -12,21 +12,116 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script async src="https://www.instagram.com/embed.js"></script>
  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+      * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Noto Sans TC', sans-serif;
       line-height: 1.6;
       background: #f7f7f7;
       color: #333;
     }
-   .hero-image {
-  background: url('pic/011.jpg') no-repeat center center;
-  background-size: contain;   /* 改為 contain 而不是 cover */
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;                /* 寬度撐滿 */
-  height: 60vh;               /* 高度保留 */
-  }
+    .hero-image {
+      background: url('pic/011.jpg') no-repeat center center;
+      background-size: cover;
+      width: 100%;
+      height: 60vh;
+      min-height: 360px;
+    }
+    .hero-text {
+      text-align: center;
+      background: #fff;
+      padding: 40px 20px;
+      color: #333;
+      }
+    nav {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .info-gallery,
+    .photo-wall,
+    .facility-grid,
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .info-gallery img,
+    .photo-wall img,
+    .facility-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .gallery-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 0 20px;
+      max-width: 1000px;
+      margin: auto;
+      box-sizing: border-box;
+    }
+    .gallery-slider img {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      scroll-snap-align: start;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid #ccc;
+      word-break: break-word;
+      table-layout: auto;
+    }
+    .facility-item {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+    iframe {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 20px;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
   @media (max-width: 768px) {
   .hero-image {
     height: auto;
@@ -130,6 +225,7 @@
       scroll-snap-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       cursor: pointer;
+    }
     }
     @media (max-width: 600px) {
       .facility-item img {
